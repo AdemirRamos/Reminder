@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+
+    <link rel="shortcut icon" href="Pictures/alarm.png" type="image/x-icon">
+    <link rel="stylesheet" href="reminder.css">
+    <script src="reminder.js"></script>
+
+</head>
+
+<body>
+    
+    <audio src="Audio/beep.mp3" id="audio"></audio>
+
+    <head>
+
+        <section id="menu">
+
+            <h1 id="title">Soon We're Gonna Remind You!</h1>
+
+        </section>
+
+    </head>
+
+    <article>
+
+        <section id="watch_container" title="Click here to show the remaining time!">
+
+            <p id="watch"></p>
+
+        </section>
+
+        <section class="remaining">
+
+            <p class="remainingText">Remaining Time:<span id="one">0</span> <span id="two">0</span> <span id="three">0</span></p>
+
+        </section>
+
+        <section id="box">
+
+            <p class="first_text">Your reminder will appear here!</p>
+
+            <img src="Pictures/blue.png" alt="Just a blue square." id="image">
+            <p id="text"></p>
+
+        </section>
+
+        <button class="waterButton">Show</button>
+        <button class="testButton" title="Click here to calculate the amount of water you have to drink per day.">Test</button>
+
+        <section class="waterBox">
+
+            <label for="" id="labelAge">Age:</label> <input type="text" id="age" size="5" value=""> <span style="display: block;"></span>
+            <label for="" id="labelWeight">Weight:</label> <input type="text" id="weight" size="5" value="">
+
+            <p class="waterAmount">You have to drink: <span id="result"></span></p>
+
+        </section>
+
+    </article>
+
+</body>
+
+</html>
