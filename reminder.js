@@ -25,10 +25,11 @@ function timer() {
         image.alt = 'In the picture, we have half a face of a woman; she\'s holding a bottle of water with its bottleneck half turned towards her mouth which is slightly opened; into her mouth, goes a gush of water.'
 
         text.innerText = 'Drink Water!'
-        counter >= 32? text.innerText += ` Have you drink water already?` : ''
+        counter >= 31? text.innerText += ` Have you drink water already?` : ''
     }
 
     if (counter >= 35) {
+        first_text.style.display = 'block'
         image.src = 'Pictures/blue.png'
         image.alt = ''
         text.innerText = ''
@@ -36,14 +37,17 @@ function timer() {
     }
 
     if (counterTwo >= 40) {
+        first_text.style.display = 'none'
         counterTwo == 40? audio.play() : ''
-        image.src = 'Pictures/legs.jpg'
-        image.alt = 'In the picture, we have two masculine legs stretched, in the middle of a road; on the horizon, we have a sunset.'
-        text.innerText = 'Stretch your legs a little bit!'
-        counterTwo >= 42? text.innerText += ` What do you think about a pretty short hike?` : ''
+        image.src = 'Pictures/eyes.jpg'
+        image.alt = 'In the picture, we have a masculine face with a light strip passing through the face; the nose and the right eye are being highlighted by the light.'
+
+        text.innerText = 'Give your eyes a little break!'
+        counterTwo >= 41? text.innerText += ` You know who's waiting for you? That beautiful horizon in your window!` : ''
     }
 
     if (counterTwo >= 45) {
+        first_text.style.display = 'block'
         image.src = 'Pictures/blue.png'
         image.alt = ''
         text.innerText = ''
@@ -51,15 +55,16 @@ function timer() {
     }
 
     if (counterThree >= 60) {
+        first_text.style.display = 'none'
         counterThree == 60? audio.play() : ''
-        image.src = 'Pictures/eyes.jpg'
-        image.alt = 'In the picture, we have a masculine face with a light strip passing through the face; the nose and the right eye are being highlighted by the light.'
-
-        text.innerText = 'Give your eyes a little break!'
-        counterThree >= 62? text.innerText += ` You know who's waiting for you? That beautiful horizon in your window!` : ''
+        image.src = 'Pictures/legs.jpg'
+        image.alt = 'In the picture, we have two masculine legs stretched, in the middle of a road; on the horizon, we have a sunset.'
+        text.innerText = 'Stretch your legs a little bit!'
+        counterThree >= 61? text.innerText += ` What do you think about a pretty short hike?` : ''
     }
 
     if (counterThree >= 65) {
+        first_text.style.display = 'block'
         image.src = 'Pictures/blue.png'
         image.alt = ''
         text.innerText = ''
@@ -75,16 +80,15 @@ function remaining() {
     let one = document.getElementById('one')
     let two = document.getElementById('two')
     let three = document.getElementById('three')
-    let p1 = document.getElementsByClassName('remainingText')[0]
 
     one.innerHTML = ` Water: ${counterFour--} min. /`
-    counterFour < 0? counterFour = 35 : ''
+    counterFour == -1? counterFour = 35 : ''
 
-    two.innerHTML = `Legs: ${counterFive--} min. /`
-    counterFive < 0? counterFive = 45 : ''
+    two.innerHTML = `Eyes: ${counterFive--} min. /`
+    counterFive == -1? counterFive = 45 : ''
 
-    three.innerHTML = `Eyes: ${counterSix--} min.`
-    counterSix < 0? counterSix = 65 : ''
+    three.innerHTML = `Legs: ${counterSix--} min.`
+    counterSix == -1? counterSix = 65 : ''
 }
 
 function openTimer() {
