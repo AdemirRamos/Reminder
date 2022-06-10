@@ -25,7 +25,7 @@ function timer() {
         image.alt = 'In the picture, we have half a face of a woman; she\'s holding a bottle of water with its bottleneck half turned towards her mouth which is slightly opened; into her mouth, goes a gush of water.'
 
         text.innerText = 'Drink Water!'
-        counter >= 31? text.innerText += ` Have you drink water already?` : ''
+        counter >= 31? text.innerText += ` Have you drunk water already?` : ''
     }
 
     if (counter >= 35) {
